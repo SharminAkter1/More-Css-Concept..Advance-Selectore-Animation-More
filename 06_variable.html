@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        :root{
+            --primary-color:steelblue;
+            --secondary-color:skyblue;
+            --light-color:#f4f4f4;
+            
+        }
+
+        .box {
+            --max-width:700px;
+            --box-1-width:2;
+            --box-2-width:1;
+        }
+       *{
+           padding: 0;
+           margin: 0;
+       }
+
+       body {
+           font-size: 0.9rem;
+           font-family: Arial, Helvetica, sans-serif;
+           line-height: 1.3;
+           --light-color:#f4f4f4;
+           background: var(--light-color);
+         
+       }
+
+       header {
+           background: var(--primary-color);
+           color: #fff;
+           text-align: center;
+           border-bottom: 3px var(--secondary-color) solid;
+       }
+       .container {
+           display: flex;
+           margin: auto;
+           max-width: var(--max-width);
+
+       }
+
+       .box {
+           background: var(--primary-color);
+           border-bottom:3px var(--secondary-color) solid;
+           color: #fff;
+           padding: 0.7rem;
+           margin: 0.7rem;
+       }
+       .box-1 {flex: var(--box-1-width)}
+       .box-2 {flex: var(--box-2-width)}
+    </style>
+    </style>
+</head>
+<body>
+    <header>
+        <h3>CSS Variables</h3>
+    </header>
+
+    <div class="container">
+       <div class="box box-1">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Et voluptatum, 
+            quaerat dicta assumenda iusto molestias!</p>
+      </div>
+      <div class="box box-2">
+        <h3>Heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Et voluptatum, 
+        quaerat dicta assumenda iusto molestias!</p>
+  </div>
+    </div>
+</body>
+</html>
